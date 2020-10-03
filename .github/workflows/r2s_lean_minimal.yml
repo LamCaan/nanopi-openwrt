@@ -13,7 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    if: github.repository == 'LamCaan/nanopi-openwrt'
+    if: github.repository == 'CaanLAM/nanopi-openwrt'
 
     steps:
 
