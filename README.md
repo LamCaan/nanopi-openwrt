@@ -2,6 +2,8 @@
 
 ### 发布地址：
 
+fork自https://github.com/klever1988/nanopi-openwrt,自用,去掉一些不需要的插件
+
 https://github.com/klever1988/nanopi-openwrt/releases  
 (请记得下载zip包之后解压出里头的固件包再刷，不要拿zip直刷，会失败的！)
 
