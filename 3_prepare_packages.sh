@@ -15,6 +15,7 @@ rm -rf luci-app-smartdns/ && git clone -b lede https://github.com/pymumu/luci-ap
 rm -rf v2ray/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray
 rm -rf v2ray-plugin/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin
 rm -rf trojan/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
+svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 cd ../../
 
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
