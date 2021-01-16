@@ -12,7 +12,7 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     if: github.repository == 'CaanLAM/nanopi-openwrt'
 
     steps:
@@ -56,7 +56,7 @@ jobs:
           sed -i 's/@LINUX_5_4//' package/lean/luci-app-flowoffload/Makefile
           . ../../5_mods.sh
           mv ../../scripts/check_wan4.sh package/base-files/files/usr/bin && sed -i '/exit/i\/bin/sh /usr/bin/check_wan4.sh &' package/base-files/files/etc/rc.local
-#          mv ../../scripts/autoupdate.sh package/base-files/files/root/au.sh && chmod +x package/base-files/files/root/au.sh
+          mv ../../scripts/autoupdate.sh package/base-files/files/root/au.sh && chmod +x package/base-files/files/root/au.sh
 
       - name: Build FriendlyWrt
         run: . 4_build_image.sh friendlywrt-rk3328 nanopi_r2s.mk
