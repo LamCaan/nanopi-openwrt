@@ -5,9 +5,9 @@ wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/rockchip/patch
 git apply 003-arm64-dts-rockchip-add-more-cpu-operating-points-for.patch
 cd ../
 git clone https://github.com/openwrt/openwrt && cd openwrt/
+git checkout a47279154e08d54df05fa8bf45fe935ebf0df5da
 wget https://raw.githubusercontent.com/fanck0605/openwrt-nanopi-r2s/openwrt-master/patches/0003-rk3328-swap-wan-and-lan-for-NanoPi-R2S.patch
 git am -3 0003-rk3328-swap-wan-and-lan-for-NanoPi-R2S.patch
-git checkout a47279154e08d54df05fa8bf45fe935ebf0df5da
 #rm target/linux/generic/pending-5.4/403-mtd-hook-mtdsplit-to-Kbuild.patch
 #rm target/linux/generic/hack-5.4/700-swconfig_switch_drivers.patch
 cp -a ./target/linux/generic/files/* ../kernel/
