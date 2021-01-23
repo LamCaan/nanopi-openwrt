@@ -19,9 +19,6 @@ rm -rf v2ray-plugin/ && svn co https://github.com/coolsnowwolf/lede/trunk/packag
 rm -rf trojan/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
 svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 
-sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-
 cd ../../
 
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
