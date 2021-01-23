@@ -1,4 +1,6 @@
 cd friendlywrt-rk3328
+sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network
+sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 cd kernel/
 git apply ../../add_fullconenat.diff
 wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/rockchip/patches-5.4/003-arm64-dts-rockchip-add-more-cpu-operating-points-for.patch
