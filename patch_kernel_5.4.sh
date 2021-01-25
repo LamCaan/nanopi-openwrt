@@ -1,8 +1,4 @@
 cd friendlywrt-rk3328
-cd friendlywrt
-wget https://raw.githubusercontent.com/fanck0605/openwrt-nanopi-r2s/openwrt-master/patches/0003-rk3328-swap-wan-and-lan-for-NanoPi-R2S.patch
-git am -3 0003-rk3328-swap-wan-and-lan-for-NanoPi-R2S.patch
-cd ../
 cd kernel/
 git apply ../../add_fullconenat.diff
 wget https://raw.githubusercontent.com/coolsnowwolf/lede/c39177efcfd9df8ea8e5d8e687d327fe77bfde52/target/linux/rockchip/patches-5.4/003-arm64-dts-rockchip-add-more-cpu-operating-points-for.patch
