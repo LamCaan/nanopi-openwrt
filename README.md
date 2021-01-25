@@ -1,6 +1,6 @@
 ## Nanopi r1s r2s openwrt 固件自动编译
 
-fork自 https://github.com/klever1988/nanopi-openwrt 自用,去掉一些不需要的插件
+fork自 https://github.com/klever1988/nanopi-openwrt 自用,去掉一些不需要的插件 交换默认网口
 
 ### 发布地址：
 
@@ -46,4 +46,4 @@ sh /tmp/upload/autoupdate-offline.sh
 ```
 #### 本固件(minimal版本)NAT基准性能测试：
 
-<img src="https://github.com/klever1988/nanopi-openwrt/raw/master/assets/NAT.jpg" width="600" /><img src="https://raw.githubusercontent.com/klever1988/nanopi-openwrt/master/assets/Acc.jpg" width="250" />
+<img src="https://github.com/CaanLAM/nanopi-openwrt/raw/master/assets/NAT.jpg" width="600" /><img src="https://raw.githubusercontent.com/CaanLAM/nanopi-openwrt/master/assets/Acc.jpg" width="250" />
