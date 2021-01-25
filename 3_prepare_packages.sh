@@ -3,6 +3,9 @@ rm -rf feeds/packages/libs/libcap/ && svn co https://github.com/openwrt/packages
 rm -rf feeds/packages/lang/golang/ && svn co https://github.com/coolsnowwolf/packages/trunk/lang/golang feeds/packages/lang/golang
 sed -i '/enable-jsonc/i\\t--disable-cloud \\' feeds/packages/admin/netdata/Makefile
 
+sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip-rk3328/base-files/etc/board.d/02_network
+sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip-rk3328/base-files/etc/board.d/02_network
+
 
 cd package/lean/
 if [[ `pwd` == *"rk3328"* ]]; then
