@@ -33,7 +33,7 @@ rm -rf trojan/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean
 
 svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 
-svn co https://github.com/project-openwrt/openwrt/branches/master/package/lean/pandownload-fake-server package/lean/pandownload-fake-server
+#svn co https://github.com/project-openwrt/openwrt/branches/master/package/lean/pandownload-fake-server package/lean/pandownload-fake-server
 
 #svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-uugamebooster package/lean/luci-app-uugamebooster
 #svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/uugamebooster package/lean/uugamebooster
