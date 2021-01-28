@@ -19,6 +19,7 @@ CONFIG_LIBSODIUM_MINIMAL=y
 CONFIG_PACKAGE_kmod-rtl8xxxu=y
 CONFIG_PACKAGE_ddns-scripts_aliyun=y
 CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
+#CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-theme-argon=y
 #CONFIG_PACKAGE_luci-theme-material=y
 #CONFIG_PACKAGE_luci-theme-netgear=y
