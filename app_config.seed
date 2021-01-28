@@ -53,13 +53,13 @@ CONFIG_UnblockNeteaseMusic_Go=y
 CONFIG_UnblockNeteaseMusic_NodeJS=y
 CONFIG_PACKAGE_luci-app-uhttpd=y
 CONFIG_PACKAGE_luci-app-upnp=y
-CONFIG_PACKAGE_luci-app-v2ray-server=y
-CONFIG_PACKAGE_luci-app-vssr=y
+#CONFIG_PACKAGE_luci-app-v2ray-server=y
+#CONFIG_PACKAGE_luci-app-vssr=y
 CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-theme-argon=y
-CONFIG_PACKAGE_luci-theme-material=y
-CONFIG_PACKAGE_luci-theme-netgear=y
-CONFIG_PACKAGE_luci-theme-infinityfreedom=y
+#CONFIG_PACKAGE_luci-theme-material=y
+#CONFIG_PACKAGE_luci-theme-netgear=y
+#CONFIG_PACKAGE_luci-theme-infinityfreedom=y
 CONFIG_PACKAGE_luci-app-flowoffload=y
 # CONFIG_PACKAGE_luci-app-sfe is not set
 
