@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/r2s_lean_minimal_old.yml'
+      - '.github/workflows/r2s_lean_minimal_test.yml'
   schedule:
     - cron: '30 21 * * *'
 
