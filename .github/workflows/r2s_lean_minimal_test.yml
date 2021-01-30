@@ -1,10 +1,10 @@
-name: r2s Lean版openwrt minimal 
+name: r2s Lean版openwrt minimal-test 
 
 on:
   push:
     branches: [ master ]
     paths:
-      - '.github/workflows/r2s_lean_minimal.yml'
+      - '.github/workflows/r2s_lean_minimal_old.yml'
   schedule:
     - cron: '30 21 * * *'
 
