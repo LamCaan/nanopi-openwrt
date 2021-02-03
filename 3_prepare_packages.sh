@@ -26,8 +26,8 @@ rm -rf trojan/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean
 svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 
 #流量监视
-rm -rf wrtbwmon/ && git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git
-rm -rf luci-app-wrtbwmon/ && git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git
+git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git
+git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git
 cd ../../
 
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
