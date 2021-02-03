@@ -29,9 +29,8 @@ svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 #svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/network/utils/iputils package/network/utils/iputil
 
 #流量监视
-#git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git package/new/wrtbwmon
-#git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git package/new/luci-app-wrtbwmon
-rm -rf wrtbwmon/ && git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git
+git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git ../new/wrtbwmon
+#git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git ../new/luci-app-wrtbwmon
 rm -rf luci-app-wrtbwmon/ && git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git
 cd ../../
 
