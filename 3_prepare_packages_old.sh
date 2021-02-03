@@ -25,14 +25,11 @@ rm -rf v2ray-plugin/ && svn co https://github.com/coolsnowwolf/lede/trunk/packag
 rm -rf trojan/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
 rm -rf luci-app-wrtbwmon/
 svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
-#serverchan
-#git clone -b master --depth 1 https://github.com/tty228/luci-app-serverchan.git package/new/luci-app-serverchan
-#svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/network/utils/iputils package/network/utils/iputil
-cd ../../
+
 #流量监视
 git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git package/new/wrtbwmon
 git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git package/new/luci-app-wrtbwmon
-#rm -rf luci-app-wrtbwmon/ && git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git
+cd ../../
 
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
 #git clone https://github.com/jerrykuku/luci-app-vssr.git
