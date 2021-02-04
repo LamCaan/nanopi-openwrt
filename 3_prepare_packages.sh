@@ -25,9 +25,6 @@ rm -rf luci-app-smartdns/ && git clone -b lede --depth 1 https://github.com/pymu
 rm -rf trojan/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan
 svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 
-#流量监视
-git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git
-git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git
 cd ../../
 
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
