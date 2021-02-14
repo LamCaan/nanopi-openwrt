@@ -30,6 +30,8 @@ git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git package
 git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git package/new/luci-app-wrtbwmon
 
 cd ../../
+rm -rf feeds/helloworld/luci-app-ssr-plus
+rm -rf package/feeds/helloworld/luci-app-ssr-plus
 
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
 #git clone https://github.com/jerrykuku/luci-app-vssr.git
