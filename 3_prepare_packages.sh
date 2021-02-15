@@ -25,8 +25,10 @@ svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
 cd ../../
 #流量监视
 rm -rf package/lean/luci-app-wrtbwmon
-git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git package/new/wrtbwmon
-git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git package/new/luci-app-wrtbwmon
+#git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git package/new/wrtbwmon
+#git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git package/new/luci-app-wrtbwmon
+svn co https://github.com/brvphoenix/wrtbwmon/trunk/wrtbwmon package/new/wrtbwmon
+svn co https://github.com/brvphoenix/luci-app-wrtbwmon/trunk/luci-app-wrtbwmon package/new/luci-app-wrtbwmon
 
 rm -rf feeds/helloworld/luci-app-ssr-plus
 rm -rf package/feeds/helloworld/luci-app-ssr-plus
