@@ -6,12 +6,12 @@ rm -rf feeds/lienol/lienol/shadowsocksr-libev
 rm -rf feeds/lienol/lienol/pdnsd-alt
 rm -rf feeds/lienol/lienol/luci-app-verysync
 rm -rf feeds/lienol/package/verysync
-#rm -rf feeds/lienol/package/chinadns-ng
+rm -rf feeds/lienol/package/chinadns-ng
+rm -rf package/lean/openwrt-chinadns-ng
 rm -rf feeds/lienol/v2ray
 rm -rf feeds/lienol/v2ray-plugin
 rm -rf package/lean/v2ray
 rm -rf package/lean/v2ray-plugin
-rm -rf package/lean/openwrt-chinadns-ng
 rm -rf package/lean/luci-app-kodexplorer
 rm -rf package/lean/luci-app-pppoe-relay
 rm -rf package/lean/luci-app-pptp-server
