@@ -15,7 +15,7 @@ fi
 rm -rf luci-theme-argon*/ ../lean/luci-theme-argon/ && git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 #rm -rf luci-app-chinadns-ng/ && git clone https://github.com/WuSiYu/luci-app-chinadns-ng
 #rm -rf luci-app-chinadns-ng/ && git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git luci-app-chinadns-ng
-#rm -rf openwrt-chinadns-ng/ && git clone https://github.com/pexcn/openwrt-chinadns-ng
+#rm -rf openwrt-chinadns-ng/ && git clone https://github.com/pexcn/openwrt-chinadns-ng && sed -i 's/\$(PKG_BUILD_DIR)\/chinadns-ng-update-list\.sh/files\/chinadns-ng-update-list\.sh/g' openwrt-chinadns-ng/Makefile
 rm -rf luci-app-smartdns/ && git clone -b lede https://github.com/pymumu/luci-app-smartdns.git
 #rm -rf v2ray/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray
 #rm -rf v2ray-plugin/ && svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin
@@ -23,14 +23,7 @@ rm -rf luci-app-smartdns/ && git clone -b lede https://github.com/pymumu/luci-ap
 rm -rf adbyby/
 rm -rf luci-app-adbyby-plus/
 svn co https://github.com/songchenwen/nanopi-r2s/trunk/luci-app-r2sflasher
-
 cd ../../
-#流量监视
-#rm -rf package/lean/luci-app-wrtbwmon
-#git clone -b master --depth 1 https://github.com/brvphoenix/wrtbwmon.git package/new/wrtbwmon
-#git clone -b master --depth 1 https://github.com/brvphoenix/luci-app-wrtbwmon.git package/new/luci-app-wrtbwmon
-#svn co https://github.com/brvphoenix/wrtbwmon/trunk/wrtbwmon package/new/wrtbwmon
-#svn co https://github.com/brvphoenix/luci-app-wrtbwmon/trunk/luci-app-wrtbwmon package/new/luci-app-wrtbwmon
 
 rm -rf feeds/helloworld/luci-app-ssr-plus
 rm -rf package/feeds/helloworld/luci-app-ssr-plus
