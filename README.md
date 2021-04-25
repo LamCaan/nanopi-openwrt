@@ -1,49 +1,52 @@
-## Nanopi r1s r2s openwrt 固件自动编译
+# Nanopi R1S R2S R4S Openwrt 固件
 
-fork自 https://github.com/klever1988/nanopi-openwrt 自用,去掉一些不需要的插件 交换默认网口
+fork自https://github.com/klever1988/nanopi-openwrt/releases 自用 去掉不要的插件 端口对调
 
-### 发布地址：
+[刷机工具](https://www.balena.io/etcher/)  
+[下载地址](#下载地址)  
+[更新说明](#更新说明)  
+[使用提示](#使用提示)  
+[固件特性](#固件特性)  
+[在线升级](#终端内在线升级方法)  
+[1分钟生成自己所需固件](#1分钟生成自己所需固件)  
 
+### 下载地址：
 https://github.com/klever1988/nanopi-openwrt/releases  
-(请记得下载zip包之后解压出里头的固件包再刷，不要拿zip直刷，会失败的！)
+(img.gz档不需要解压，可以直接使用刷机工具刷入)
 
-### 编译方式：
+### 使用提示：
+默认用户名是root, 密码是password，局域网IP为192.168.2.1  
+烧制完固件插入tf卡并启动完成，电脑端显示“网络（已连接）”之后，在浏览器输入 http://immortalwrt/ 可以直接打开路由器后台，无需修改本地连接设置或者查看IP地址。  
+如果网络状态一直是未识别（上电超过5分钟），请直接插拔一次电源重启试试。
 
-本编译方案采用git rebase(变基)，把友善friendlywrt对openwrt代码的修改应用到Lean和Lienol两个大佬的openwrt分支，并替换friendlywrt整套代码的方式，由此编译出分别包含两位大佬特色优化和插件的两版固件，寻求最佳的插件兼容性和稳定性。而minimal版是我根据自己的理解，在Lean版的基础上只编译我认为不影响设备性能的插件。目前测试结果显示，minimal虽然功能较少，但是性能是比较好的。
-
-### 温馨提示：
-
-Lean版的默认用户名是root, 密码是password  
-Lienol版默认用户名是root, 密码为空
-
-烧制完固件插入tf卡并启动完成，电脑端显示“网络（已连接）”之后，在浏览器输入 http://friendlywrt/ 可以直接打开路由器后台，无需修改本地连接设置或者查看IP地址。如果网络状态一直是未识别（上电超过5分钟），请直接插拔一次电源重启试试。
-
-### 更新说明：
-
-https://github.com/klever1988/nanopi-openwrt/blob/master/CHANGELOG.md
-
-### R2S在线升级方法:
-(注意:目前仅支持R2S，仅能升级到minimal版本固件，如果你使用的是Lienol版也不要用此方法升级)  
-先安装好依赖
+### 终端内在线升级方法：
 ```bash
-opkg update
-opkg install zstd
-opkg install libzstd
+wget -qO- https://github.com/HeliosLAM/nanopi-openwrt/raw/main/scripts/autoupdate.sh | sh
 ```
-然后下载脚本执行
+slim版
 ```bash
-wget -qO- https://github.com/klever1988/nanopi-openwrt/raw/master/scripts/autoupdate.sh | sh
+wget -qO- https://github.com/klever1988/nanopi-openwrt/raw/master/scripts/autoupdate.sh | ver=-slim sh
 ```
 (脚本由gary lau提供，非常感谢！)
 
-### R2S离线升级方法:
-(注意:目前仅支持R2S，仅能升级到minimal版本固件，如果你使用的是Lienol版也不要用此方法升级)
-把下载好的 release固件 上传到R2S（系统 -> 文件传输 -> 上传）
-把下载好的scripts目录下的 autoupdate-offline.sh 上传到R2S（系统 -> 文件传输 -> 上传）
-然后脚本执行
-```bash
-sh /tmp/upload/autoupdate-offline.sh
-```
-#### 本固件(minimal版本)NAT基准性能测试：
+### 固件特性：
+- slim版固件只有OpenWrt本体，但内置了“本地软件源”，包含大部分常用插件，不喜欢固件预装繁杂插件的人可以选择这个版本，进入后台软件包选装所需插件
+- 采用ext4文件系统，刷卡之后可自行使用分区工具对sd卡扩容根分区至最大
+- 支持usb无线网卡（RTL8821CU芯片，例如COMFAST 811AC），可以驱动无线网卡运行在5G频段
+- 使用[在线升级](#终端内在线升级方法)时，根分区会自动扩容，方便折腾
 
-<img src="https://github.com/CaanLAM/nanopi-openwrt/raw/master/assets/NAT.jpg" width="600" /><img src="https://raw.githubusercontent.com/CaanLAM/nanopi-openwrt/master/assets/Acc.jpg" width="250" />
+### 1分钟生成自己所需固件
+因为本项目预编译的Image builder，生成固件仅需1-3分钟，如果有兴趣自定义固件可以Fork本项目，编辑设备对应的config.seed文件，例如r2s.config.seed, 去掉不需要的luci app软件包配置行，添加自己所需的软件，可用软件的列表可以在github actions构件输出处获取，例如  
+<img src="https://user-images.githubusercontent.com/56048681/114531174-3beafb80-9c7e-11eb-8bcc-b098c3b1cee8.png" width="250" />  
+完成之后进入Actions，点击左侧Build，点击右侧Run workflow输入设备名（r2s/r4s/r1s/r1s-h3/r1p）  
+<img src="https://user-images.githubusercontent.com/56048681/114531768-c7648c80-9c7e-11eb-8d72-fe38f9df960d.png" width="250" />  
+再点击Run即可获取自己所需的固件
+
+### 更新说明：
+https://github.com/klever1988/nanopi-openwrt/blob/master/CHANGELOG.md
+
+#### 本固件NAT基准性能测试：
+<img src="https://raw.githubusercontent.com/klever1988/nanopi-openwrt/master/assets/NAT.jpg" width="450" />
+
+#### 固件源码：
+https://github.com/immortalwrt/immortalwrt
