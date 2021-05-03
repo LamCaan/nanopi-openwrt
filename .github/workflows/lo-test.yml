@@ -1,4 +1,4 @@
-name: build-selfhost
+name: Build-Customized
 
 on:
   repository_dispatch:
