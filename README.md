@@ -1,6 +1,6 @@
 # Nanopi R1S R2S R4S Openwrt 固件
 
-fork自https://github.com/klever1988/nanopi-openwrt/releases 自用 去掉不要的插件 端口对调
+fork自https://github.com/klever1988/nanopi-openwrt/releases 自用 去掉不要的插件
 
 [刷机工具](https://www.balena.io/etcher/)  
 [下载地址](#下载地址)  
